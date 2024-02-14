@@ -19,6 +19,8 @@ namespace app_livraria_backend.Controllers
         {
             _context = context;
 
+            _context.Database.EnsureDeleted();
+
             _context.TodoProdutos.Add(new Produto { ID = "1", Nome = "Book1", Preco = 24, Quant = 1, Categoria = "ação", Img = "Img1" });
             _context.TodoProdutos.Add(new Produto { ID = "2", Nome = "Book2", Preco = 50, Quant = 1, Categoria = "suspense", Img = "Img2" });
             _context.TodoProdutos.Add(new Produto { ID = "3", Nome = "Book3", Preco = 10, Quant = 2, Categoria = "drama", Img = "Img3" });
